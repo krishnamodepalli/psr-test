@@ -1,0 +1,49 @@
+[project]
+name = "versioning-test"
+version = "1.0.0"
+description = "A small project to test versioning and conventional commits"
+readme = "README.md"
+authors = [{ name = "Gemini Bot", email = "bot@example.com" }]
+license = { text = "MIT" }
+dependencies = []
+
+[project.urls]
+Changelog = "https://github.com/example/versioning-test/blob/main/CHANGELOG.md"
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "1.0.0"
+tag_format = "v$version"
+version_files = [
+    "pyproject.toml:version"
+]
+
+[tool.commitizen.customize]
+message_template = "{type}{scope}: {subject}"
+example = "feat(main): add new feature"
+schema = "<type>(<scope>): <subject>"
+schema_pattern = "(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\\(\\w+\\))?: .*"
+bump_pattern = "^(feat|fix|docs|refactor|perf)"
+bump_map = {"feat" = "MINOR", "fix" = "PATCH", "docs" = "PATCH", "refactor" = "PATCH", "perf" = "PATCH"}
+
+[[tool.commitizen.customize.questions]]
+type = "list"
+name = "type"
+choices = [
+    {value = "feat", name = "feat: A new feature"},
+    {value = "fix", name = "fix: A bug fix"},
+    {value = "docs", name = "docs: Documentation only changes"},
+    {value = "test", name = "test: Adding missing tests or correcting existing tests"},
+    {value = "refactor", name = "refactor: A code change that neither fixes a bug nor adds a feature"}
+]
+message = "Select the type of change you are committing"
+
+[[tool.commitizen.customize.questions]]
+type = "input"
+name = "scope"
+message = "What is the scope of this change (e.g. main, test, docs)?"
+
+[[tool.commitizen.customize.questions]]
+type = "input"
+name = "subject"
+message = "Write a short, imperative deliverable description of the change"
