@@ -7,9 +7,6 @@ authors = [{ name = "Gemini Bot", email = "bot@example.com" }]
 license = { text = "MIT" }
 dependencies = []
 
-[project.urls]
-Changelog = "https://github.com/example/versioning-test/blob/master/CHANGELOG.md"
-
 [tool.semantic_release]
 version_toml = [
     "pyproject.toml:project.version"
@@ -19,6 +16,11 @@ branch = "master"
 upload_to_pypi = false
 upload_to_release = true
 build_command = "pip install build && python -m build"
+branch = "master"
+commit_message = "chore(release): {version} [skip ci]"
+version_variables = [
+    "src/__init__.py:__version__",
+]
 
 [tool.semantic_release.changelog]
 changelog_file = "CHANGELOG.md"
