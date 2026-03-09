@@ -1,6 +1,24 @@
 # CHANGELOG
 
 
+## v1.2.0 (2026-03-09)
+
+### Bug Fixes
+
+- Remove duplicated multiply and improve test structure
+  ([`b08be34`](https://github.com/krishnamodepalli/psr-test/commit/b08be340b41314c2479a73c59b433960919c0b1a))
+
+### Chores
+
+- Update release commit message format
+  ([`bc5a676`](https://github.com/krishnamodepalli/psr-test/commit/bc5a676ab2cb9b8d0a2f8d05ebbe6897596ff321))
+
+### Features
+
+- Add division function with error handling and tests
+  ([`0599e68`](https://github.com/krishnamodepalli/psr-test/commit/0599e682ddb57c3037b4ffb61c992aabe669d1ba))
+
+
 ## v1.1.0 (2026-03-09)
 
 ### Bug Fixes
