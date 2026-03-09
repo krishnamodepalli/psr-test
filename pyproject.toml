@@ -8,42 +8,24 @@ license = { text = "MIT" }
 dependencies = []
 
 [project.urls]
-Changelog = "https://github.com/example/versioning-test/blob/main/CHANGELOG.md"
+Changelog = "https://github.com/example/versioning-test/blob/master/CHANGELOG.md"
 
-[tool.commitizen]
-name = "cz_conventional_commits"
-version = "1.0.0"
-tag_format = "v$version"
-version_files = [
-    "pyproject.toml:version"
+[tool.semantic_release]
+version_toml = [
+    "pyproject.toml:project.version"
 ]
+major_on_zero = false
+branch = "master"
+upload_to_pypi = false
+upload_to_release = true
+build_command = "pip install build && python -m build"
 
-[tool.commitizen.customize]
-message_template = "{type}{scope}: {subject}"
-example = "feat(main): add new feature"
-schema = "<type>(<scope>): <subject>"
-schema_pattern = "(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\\(\\w+\\))?: .*"
-bump_pattern = "^(feat|fix|docs|refactor|perf)"
-bump_map = {"feat" = "MINOR", "fix" = "PATCH", "docs" = "PATCH", "refactor" = "PATCH", "perf" = "PATCH"}
+[tool.semantic_release.changelog]
+changelog_file = "CHANGELOG.md"
+exclude_commit_patterns = []
 
-[[tool.commitizen.customize.questions]]
-type = "list"
-name = "type"
-choices = [
-    {value = "feat", name = "feat: A new feature"},
-    {value = "fix", name = "fix: A bug fix"},
-    {value = "docs", name = "docs: Documentation only changes"},
-    {value = "test", name = "test: Adding missing tests or correcting existing tests"},
-    {value = "refactor", name = "refactor: A code change that neither fixes a bug nor adds a feature"}
-]
-message = "Select the type of change you are committing"
-
-[[tool.commitizen.customize.questions]]
-type = "input"
-name = "scope"
-message = "What is the scope of this change (e.g. main, test, docs)?"
-
-[[tool.commitizen.customize.questions]]
-type = "input"
-name = "subject"
-message = "Write a short, imperative deliverable description of the change"
+[tool.semantic_release.commit_parser_options]
+allowed_tags = ["feat", "fix", "perf", "docs", "refactor", "test", "build", "ci", "chore", "revert"]
+minor_tags = ["feat"]
+patch_tags = ["fix", "perf", "docs", "refactor"]
+default_bump_level = 0
