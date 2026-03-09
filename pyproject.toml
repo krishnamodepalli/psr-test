@@ -8,26 +8,17 @@ license = { text = "MIT" }
 dependencies = []
 
 [tool.semantic_release]
-version_toml = [
-    "pyproject.toml:project.version"
-]
+branch = "master"
 major_on_zero = false
-branch = "master"
-upload_to_pypi = false
-upload_to_release = true
-build_command = "pip install build && python -m build"
-branch = "master"
 commit_message = "chore(release): {version} [skip ci]"
 version_variables = [
-    "src/__init__.py:__version__",
+    "pyproject.toml:project.version"
 ]
 
 [tool.semantic_release.changelog]
 changelog_file = "CHANGELOG.md"
-exclude_commit_patterns = []
 
 [tool.semantic_release.commit_parser_options]
 allowed_tags = ["feat", "fix", "perf", "docs", "refactor", "test", "build", "ci", "chore", "revert"]
 minor_tags = ["feat"]
 patch_tags = ["fix", "perf", "docs", "refactor"]
-default_bump_level = 0
