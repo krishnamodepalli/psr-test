@@ -7,8 +7,9 @@ def add(a, b):
     return a + b
 
 def main():
-    """Prints a greeting message."""
+    """Prints a greeting message and sum."""
     print("Hello, world!")
+    print(f"1 + 2 = {add(1, 2)}")
 
 if __name__ == "__main__":
     main()
