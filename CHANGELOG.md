@@ -1,5 +1,50 @@
 # CHANGELOG
 
+<!-- version list -->
+
+## Unreleased
+
+### Continuous Integration
+
+- Enable changelog generation in semantic release workflow
+  ([`f8a518c`](https://github.com/krishnamodepalli/psr-test/commit/f8a518c759fc9f934e4ebb2869b79b6cc8d73bca))
+
+### Features
+
+- Add is_even and is_odd helpers to numbers module
+  ([`cfee8dc`](https://github.com/krishnamodepalli/psr-test/commit/cfee8dc870141962bd4684ecb6a8485a8794fc0b))
+
+- Add numbers module with clamp utility
+  ([`57bf4d6`](https://github.com/krishnamodepalli/psr-test/commit/57bf4d6d469f27b7b5941338a339d78249c4c138))
+
+- Add subtract function to complete basic arithmetic operations
+  ([`60f2c6d`](https://github.com/krishnamodepalli/psr-test/commit/60f2c6d5ace40b334c3dfcac871aeaf3e4d9c8d8))
+
+
+## v1.3.0 (2026-04-14)
+
+### Features
+
+- Add string utility module with capitalize and reverse helpers
+  ([#3](https://github.com/krishnamodepalli/psr-test/pull/3),
+  [`7bb8528`](https://github.com/krishnamodepalli/psr-test/commit/7bb8528668b8bb6c1094762b6bde3ad4c156da70))
+
+- Extend string utilities with truncate and slugify functions
+  ([#3](https://github.com/krishnamodepalli/psr-test/pull/3),
+  [`7bb8528`](https://github.com/krishnamodepalli/psr-test/commit/7bb8528668b8bb6c1094762b6bde3ad4c156da70))
+
+- Integrate string utilities into main entry point
+  ([#3](https://github.com/krishnamodepalli/psr-test/pull/3),
+  [`7bb8528`](https://github.com/krishnamodepalli/psr-test/commit/7bb8528668b8bb6c1094762b6bde3ad4c156da70))
+
+- String Utils ([#3](https://github.com/krishnamodepalli/psr-test/pull/3),
+  [`7bb8528`](https://github.com/krishnamodepalli/psr-test/commit/7bb8528668b8bb6c1094762b6bde3ad4c156da70))
+
+### Testing
+
+- Refine tests with pytest parameterization and add CI workflow
+  ([`b15f9e5`](https://github.com/krishnamodepalli/psr-test/commit/b15f9e58a2069b7c190b08c2608877dfec3ac860))
+
 
 ## v1.2.1 (2026-03-09)
 
