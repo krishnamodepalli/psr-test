@@ -2,6 +2,9 @@
 Main entry point for the application.
 """
 
+from src.strings import capitalize_words, reverse_string, truncate, slugify
+
+
 def add(a, b):
     """Returns the sum of two numbers."""
     return a + b
@@ -25,6 +28,11 @@ def main():
         print(f"6 / 2 = {divide(6, 2)}")
     except ValueError as e:
         print(f"Error: {e}")
+
+    print(capitalize_words("hello world"))
+    print(reverse_string("python"))
+    print(truncate("a very long description that should be cut short", 20))
+    print(slugify("My Feature Page"))
 
 if __name__ == "__main__":
     main()
