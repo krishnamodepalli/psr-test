@@ -2,6 +2,22 @@
 
 <!-- version list -->
 
+## v1.5.0 (2026-04-14)
+
+### Bug Fixes
+
+- Add PSR v10 insertion flag to CHANGELOG.md
+  ([`575b970`](https://github.com/krishnamodepalli/psr-test/commit/575b97076b6796e8ded7f529caa604283df78c41))
+
+### Features
+
+- Add is_even and is_odd helpers to numbers module
+  ([`cfee8dc`](https://github.com/krishnamodepalli/psr-test/commit/cfee8dc870141962bd4684ecb6a8485a8794fc0b))
+
+- Add numbers module with clamp utility
+  ([`57bf4d6`](https://github.com/krishnamodepalli/psr-test/commit/57bf4d6d469f27b7b5941338a339d78249c4c138))
+
+
 ## Unreleased
 
 ### Continuous Integration
