@@ -9,6 +9,10 @@ def add(a, b):
     """Returns the sum of two numbers."""
     return a + b
 
+def subtract(a, b):
+    """Returns the difference of two numbers."""
+    return a - b
+
 def multiply(a, b):
     """Returns the product of two numbers."""
     return a * b
@@ -23,6 +27,7 @@ def main():
     """Prints a greeting message and basic math operations."""
     print("Hello, world!")
     print(f"1 + 2 = {add(1, 2)}")
+    print(f"5 - 3 = {subtract(5, 3)}")
     print(f"2 * 3 = {multiply(2, 3)}")
     try:
         print(f"6 / 2 = {divide(6, 2)}")
